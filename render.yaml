@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: exammentorai-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: HF_TOKEN
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.9
